@@ -16,9 +16,9 @@ game.Players.ChildAdded:Connect(function(player)
   end) then
     print ("Error")
   end
-  end)
+end)
 
-  game.Players.ChildRemoved:Connect(function(player)
+game.Players.ChildRemoved:Connect(function(player)
   if not pcall (function()
   SendNotification("Player Left",""..player.Name.."  서버에서 나갔습니다.",2.5 )
   end) then
