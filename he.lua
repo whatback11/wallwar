@@ -24,38 +24,6 @@ function mbt(t, num)
 end
 -- my funtion
 
-
-function randomString()
-	local length = math.random(10,20)
-	local array = {}
-	for i = 1, length do
-		array[i] = string.char(math.random(32, 126))
-	end
-	return table.concat(array)
-end
-
-PARENT = nil
-if get_hidden_gui or gethui then
-	local hiddenUI = get_hidden_gui or gethui
-	Main = Instance.new("ScreenGui")
-	Main.Name = randomString()
-	Main.Parent = hiddenUI()
-	PARENT = Main
-elseif (not is_sirhurt_closure) and (syn and syn.protect_gui) then
-	local Main = Instance.new("ScreenGui")
-	Main.Name = randomString()
-	syn.protect_gui(Main)
-	Main.Parent = COREGUI
-	PARENT = Main
-elseif COREGUI:FindFirstChild('RobloxGui') then
-	PARENT = COREGUI.RobloxGui
-else
-	local Main = Instance.new("ScreenGui")
-	Main.Name = randomString()
-	Main.Parent = COREGUI
-	PARENT = Main
-end
-
 Main.Position = UDim2.new(0.5, 0, 0.2, 0)
 Main.Size = UDim2.new(0, 800, 0, 150)
 Main.AnchorPoint = Vector2.new(0.5, 0.5)
