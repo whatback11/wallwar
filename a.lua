@@ -14,6 +14,7 @@ game.Players.ChildRemoved:Connect(function(player)
     print ("Error")
   end
 end)
+local PrisonBreakerV16 = Instance.new("ScreenGui")
 local openmain = Instance.new("Frame")
 openmain.Name = "openmain"
 openmain.Parent = PrisonBreakerV16
